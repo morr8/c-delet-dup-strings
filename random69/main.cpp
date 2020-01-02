@@ -1,15 +1,27 @@
-//
-//  main.cpp
-//  random69
-//
-//  Created by Sergio campos on 12/25/19.
-//  Copyright © 2019 Sergio campos. All rights reserved.
-//
-
 #include <iostream>
+using namespace std;
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
-    return 0;
+int main()
+{
+   string word;
+   cin >> word;
+   
+   bool done = false;
+   while (!done)
+   {
+      string previous = word;
+      cin >> word;
+      if (word.substr(word.length() - 1) == ".")
+      {
+         word = word;
+         done = true;
+      }
+      if (word != previous)
+      {
+         cout << previous << " ";
+      }
+   }
+   cout << word;
+
+   return 0;
 }
